@@ -93,7 +93,7 @@ app.put("/recipe/:id", (req, res) => {
 
 //  Iteration 7 - Delete a Single Recipe
 //  DELETE  /recipes/:id route
-app.put("/recipe/:id", (req, res) => {
+app.delete("/recipe/:id", (req, res) => {
   RecipeModel.findByIdAndDelete(req.params.id)
     .then((deletedRecipe) => {
       res.status(200).json(deletedRecipe);
